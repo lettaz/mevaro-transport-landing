@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none">
+  <path d="M20 48L80 18L140 48V112L80 142L20 112V48Z" fill="#C45A1A"/>
+  <path d="M20 48L80 78L140 48L80 18L20 48Z" fill="#E87A2F"/>
+  <path d="M80 78V142L140 112V48L80 78Z" fill="#9A4314"/>
+  <path d="M20 48L80 78V142L20 112V48Z" fill="#B34F16"/>
+  <path d="M55 55L80 42L105 55L80 68L55 55Z" fill="#FFB020" opacity="0.85"/>
+</svg>
