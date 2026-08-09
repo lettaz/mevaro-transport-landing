@@ -27,15 +27,14 @@ export function Hero({ ready }: { ready: boolean }) {
         return;
       }
 
+      gsap.set(".hero-line", { yPercent: 110 });
+      gsap.set([".hero-sub", ".hero-cta", ".hero-stats"], { opacity: 0, y: 24 });
+
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.fromTo(
-        ".hero-line",
-        { yPercent: 110 },
-        { yPercent: 0, stagger: 0.1, duration: 1.15 },
-      )
-        .fromTo(".hero-sub", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.75 }, "-=0.45")
-        .fromTo(".hero-cta", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.35")
-        .fromTo(".hero-stats", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.25");
+      tl.to(".hero-line", { yPercent: 0, stagger: 0.1, duration: 1.15 })
+        .to(".hero-sub", { opacity: 1, y: 0, duration: 0.75 }, "-=0.45")
+        .to(".hero-cta", { opacity: 1, y: 0, duration: 0.55 }, "-=0.35")
+        .to(".hero-stats", { opacity: 1, y: 0, duration: 0.6 }, "-=0.25");
 
       gsap.to(".hero-media", {
         yPercent: 16,
@@ -78,15 +77,15 @@ export function Hero({ ready }: { ready: boolean }) {
           </p>
           <h1 className="font-display text-[clamp(2.6rem,8vw,5.6rem)] leading-[0.95] font-bold tracking-tight text-paper">
             <span className="block overflow-hidden">
-              <span className="hero-line reveal-ready inline-block">Smarter transport.</span>
+              <span className="hero-line inline-block will-change-transform">Smarter transport.</span>
             </span>
             <span className="block overflow-hidden">
-              <span className="hero-line reveal-ready inline-block text-white/90">
+              <span className="hero-line inline-block will-change-transform text-white/90">
                 Faster deliveries.
               </span>
             </span>
             <span className="block overflow-hidden">
-              <span className="hero-line reveal-ready inline-block">Vienna reach.</span>
+              <span className="hero-line inline-block will-change-transform">Vienna reach.</span>
             </span>
           </h1>
           <p className="hero-sub reveal-ready mt-6 max-w-xl text-base leading-relaxed text-mist md:text-lg">
