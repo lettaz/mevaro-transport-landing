@@ -64,7 +64,9 @@ export function CargoOrbit({ ready }: { ready: boolean }) {
             start: "top top",
             end: "+=1600",
             pin: true,
-            scrub: 1,
+            scrub: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
           },
         });
 
